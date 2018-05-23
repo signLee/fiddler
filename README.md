@@ -2,54 +2,55 @@
 fiddler use construction
 
 
-ÅäÖÃ£º(ÅäÖÃ×¥È¡httpsÁ´½Ó)
-tools--->options--->https--->¹´Ñ¡capture HTTPS CONNECTs£¨²¶»ñhttpsÁ¬½Ó£©£¬decrypt HTTPS traffic£¨½âÃÜhttpsÁ÷Á¿£©£¬ignore server certificate errors£¨ºöÂÔhttps´íÎó£©
+é…ç½®ï¼š(é…ç½®æŠ“å–httpsé“¾æ¥)<br><br>
+tools--->options--->https--->å‹¾é€‰capture HTTPS CONNECTsï¼ˆæ•è·httpsè¿æ¥ï¼‰ï¼Œdecrypt HTTPS trafficï¼ˆè§£å¯†httpsæµé‡ï¼‰ï¼Œignore server certificate errorsï¼ˆå¿½ç•¥httpsé”™è¯¯ï¼‰
 
-F12¿ªÊ¼²¶×½£¨Ä¬ÈÏÊÇ´ò¿ª×´Ì¬£©
-autoResponder£ºµØÖ·´úÀí ½«Ô¶³ÌµØÖ·´úÀíµ½±¾µØÂ·¾¶  ¿ÉÓÃÓÚ½«±¾µØµØÖ·´úÀíµ½²âÊÔµØÖ·
-enable rules¹´Ñ¡->unmatched requests passthrough£¨²»Æ¥ÅäÔÊĞíÍ¨¹ı£©¹´Ñ¡
-add rule:
-EG:°Ñ°Ù¶ÈµÄµØÖ·´úÀíµ½±¾µØÎÄ¼ş
-EXACT:https://www.baidu.com/  //·ÃÎÊµØÖ·
-C:\Users\sign\Desktop\test.txt   //±¾µØ´úÀíµØÖ·
-save
+F12å¼€å§‹æ•æ‰ï¼ˆé»˜è®¤æ˜¯æ‰“å¼€çŠ¶æ€ï¼‰<br><br>
+autoResponderï¼šåœ°å€ä»£ç† å°†è¿œç¨‹åœ°å€ä»£ç†åˆ°æœ¬åœ°è·¯å¾„  å¯ç”¨äºå°†æœ¬åœ°åœ°å€ä»£ç†åˆ°æµ‹è¯•åœ°å€<br><br>
+enable ruleså‹¾é€‰->unmatched requests passthroughï¼ˆä¸åŒ¹é…å…è®¸é€šè¿‡ï¼‰å‹¾é€‰<br><br>
+add rule:<br><br>
+EG:æŠŠç™¾åº¦çš„åœ°å€ä»£ç†åˆ°æœ¬åœ°æ–‡ä»¶<br><br>
+EXACT:https://www.baidu.com/  //è®¿é—®åœ°å€<br><br>
+C:\Users\sign\Desktop\test.txt   //æœ¬åœ°ä»£ç†åœ°å€<br><br>
+save<br><br>
 
-composer±¾µØ·¢ËÍÇëÇó
-type:POST
-http://test.msjk95596.com/rest/personnel/svr/v0/recruitinfo/page
-ÉèÖÃContent-Type: application/json
-request BodyÀïÊäÈëÈë²Î
+composeræœ¬åœ°å‘é€è¯·æ±‚<br><br>
+type:POST<br><br>
+http://test.msjk95596.com/rest/personnel/svr/v0/recruitinfo/page<br><br>
+è®¾ç½®Content-Type: application/json<br><br>
+request Bodyé‡Œè¾“å…¥å…¥å‚<br><br>
 {
 	"pageNo": 0, 
 	"pageSize": 10,
 	"jobType": "", 
 	"status": "online"
 }
-executeµ÷ÓÃ½Ó¿Ú
-²é¿´½Ó¿Ú·µ»ØĞÅÏ¢£º
-Ë«»÷Á´½Ó£¬InspectorsÀïÊÇ¹ØÓÚ½Ó¿ÚµÄ¸÷ÖÖĞÅÏ¢£¬µ×²¿ÊÇ½Ó¿Ú·µ»ØµÄ¸÷ÖÖĞÅÏ¢
+executeè°ƒç”¨æ¥å£<br><br>
+æŸ¥çœ‹æ¥å£è¿”å›ä¿¡æ¯ï¼š<br><br>
+åŒå‡»é“¾æ¥ï¼ŒInspectorsé‡Œæ˜¯å…³äºæ¥å£çš„å„ç§ä¿¡æ¯ï¼Œåº•éƒ¨æ˜¯æ¥å£è¿”å›çš„å„ç§ä¿¡æ¯<br><br>
 
-»ğºüÅäÖÃÔÊĞífiddler´úÀí£ºÉèÖÃ->¸ß¼¶->ÍøÂç->ÅäÖÃfirfoxÈçºÎÁ¬½Óµ½»¥ÁªÍø--->Ê¹ÓÃÏµÍ³´úÀíÉèÖÃ
+ç«ç‹é…ç½®å…è®¸fiddlerä»£ç†ï¼šè®¾ç½®->é«˜çº§->ç½‘ç»œ->é…ç½®firfoxå¦‚ä½•è¿æ¥åˆ°äº’è”ç½‘--->ä½¿ç”¨ç³»ç»Ÿä»£ç†è®¾ç½®<br><br>
 
-filters£º¹ıÂËÖ¸¶¨ÍøÕ¾
-EG:
-ÈçĞèÒª×¥È¡https://www.xxxx.com/wxproduct/getProductLoanListÕâ¸öÁ´½ÓµÄÊı¾İ
-Filter:
-¹´Ñ¡use Filters
-hostÀïÑ¡ÄÚÍø»¹ÊÇÍâÍø (www¿ªÍ·µÄÎªÍâÍø)
-ÏÂÃæÑ¡Ôñ¹ıÂËÌõ¼ş
-ÌîĞ´µØÖ· £ºwww.xxxx.com
-request headerÀï¹´Ñ¡show only fi URL contains£¬ÌîĞ´½Ó¿ÚÃû£ºwxproduct/getProductLoanList	
-ÕâÑùfiddler¾ÍÖ»»á×¥https://www.xxxx.com/wxproduct/getProductLoanListÕâ¸öÁ´½ÓµÄÊı¾İÁË
+filtersï¼šè¿‡æ»¤æŒ‡å®šç½‘ç«™<br><br>
+EG:<br><br>
+å¦‚éœ€è¦æŠ“å–https://www.xxxx.com/wxproduct/getProductLoanListè¿™ä¸ªé“¾æ¥çš„æ•°æ®<br><br>
+Filter:<br><br>
+å‹¾é€‰use Filters<br><br>
+hosté‡Œé€‰å†…ç½‘è¿˜æ˜¯å¤–ç½‘ (wwwå¼€å¤´çš„ä¸ºå¤–ç½‘)<br><br>
+ä¸‹é¢é€‰æ‹©è¿‡æ»¤æ¡ä»¶<br><br>
+å¡«å†™åœ°å€ ï¼šwww.xxxx.com<br><br>
+request headeré‡Œå‹¾é€‰show only fi URL containsï¼Œå¡«å†™æ¥å£åï¼šwxproduct/getProductLoanList	<br><br>
+è¿™æ ·fiddlerå°±åªä¼šæŠ“https://www.xxxx.com/wxproduct/getProductLoanListè¿™ä¸ªé“¾æ¥çš„æ•°æ®äº†<br><br>
 
 
-fiddler¶ÏµãÊ¹ÓÃ£ºF11  ¿ÉÒÔÉèÖÃÇëÇóÇ°¶Ïµã»òÇëÇóºó¶Ïµã rules-----automatic breakoptions ---before request  Ò»°ãÅäºÏfilterÊ¹ÓÃ
-µã»÷Á¬½Ó---------break on response-----textviewÀïÊÇ·µ»ØµÄÊı¾İ£¬ĞŞ¸ÄºÃºóµãrun to completion¾ÍÊµÏÖÁËĞŞ¸ÄºóÌ¨·µ»ØµÄÊı¾İ
+fiddleræ–­ç‚¹ä½¿ç”¨ï¼šF11 å¯ä»¥è®¾ç½®è¯·æ±‚å‰æ–­ç‚¹æˆ–è¯·æ±‚åæ–­ç‚¹ <br><br>
+rules-----automatic breakoptions ---before request  ä¸€èˆ¬é…åˆfilterä½¿ç”¨<br><br>
+ç‚¹å‡»è¿æ¥---------break on response-----textviewé‡Œæ˜¯è¿”å›çš„æ•°æ®ï¼Œä¿®æ”¹å¥½åç‚¹run to completionå°±å®ç°äº†ä¿®æ”¹åå°è¿”å›çš„æ•°æ®<br><br>
 
-¿ªÆôÔ¶³Ìµ÷ÊÔ£ºÔÊĞí×¥È¡ÊÖ»úÊı¾İ
-tools----options------connections--allow remote computers to connect -----ÖØÆôflddler
-ÊÖ»úºÍPC±ØĞëÔÚÍ¬Ò»Íø¶Î
-ÊÖ»úÉèÖÃ£ºwifi----http´úÀí---ÊäÈëPC¶ËµÄipºÍ¶Ë¿ÚºÅ-----Êı¾İPC¶ËipµØÖ·ºÍ¶Ë¿ÚºÅ-------ÏÂÔØÖ¤Êé°²×°---Í¨ÓÃ-ÉèÖÃ-¹ØÓÚ±¾»ú-----ĞÅÈÎÖ¤Êé
+å¼€å¯è¿œç¨‹è°ƒè¯•ï¼šå…è®¸æŠ“å–æ‰‹æœºæ•°æ®<br><br>
+tools----options------connections--allow remote computers to connect -----é‡å¯flddler<br><br>
+æ‰‹æœºå’ŒPCå¿…é¡»åœ¨åŒä¸€ç½‘æ®µ<br><br>
+æ‰‹æœºè®¾ç½®ï¼šwifi----httpä»£ç†---è¾“å…¥PCç«¯çš„ipå’Œç«¯å£å·-----æ•°æ®PCç«¯ipåœ°å€å’Œç«¯å£å·-------ä¸‹è½½è¯ä¹¦å®‰è£…---é€šç”¨-è®¾ç½®-å…³äºæœ¬æœº-----ä¿¡ä»»è¯ä¹¦<br><br>
 
 
 
