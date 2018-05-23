@@ -47,10 +47,12 @@ fiddler断点使用：F11 可以设置请求前断点或请求后断点 <br><br>
 rules-----automatic breakoptions ---before request  一般配合filter使用<br><br>
 点击连接---------break on response-----textview里是返回的数据，修改好后点run to completion就实现了修改后台返回的数据<br><br>
 
-开启远程调试：允许抓取手机数据<br><br>
+开启远程调试：允许抓取手机数据(ios)<br><br>
 tools----options------connections--allow remote computers to connect -----重启flddler<br><br>
 手机和PC必须在同一网段<br><br>
 手机设置：wifi----http代理---输入PC端的ip和端口号-----数据PC端ip地址和端口号-------下载证书安装---通用-设置-关于本机-----信任证书<br><br>
+
+安卓：跟上面差不多，具体百度吧<br><br>
 
 
 
